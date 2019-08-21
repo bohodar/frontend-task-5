@@ -1,0 +1,29 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+
+    margin: 0;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+.main-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 100%;
+    min-height: 100%;
+
+    background-color: rgb(17, 27, 41);
+    opacity: 0.851;
+}
+
+.white-block {
+    display: flex;
+
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 9px 51px 0 rgba(0, 0, 0, 0.35);
+    width: 820px;
+    height: 632px;
+}
