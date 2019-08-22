@@ -3,7 +3,8 @@ body {
 
     margin: 0;
     box-sizing: border-box;
-    height: 100vh;
+
+    min-width: 820px;
 }
 
 .main-wrapper {
@@ -11,11 +12,12 @@ body {
     justify-content: center;
     align-items: center;
 
-    min-width: 100%;
-    min-height: 100%;
+    width: 100%;
+    height: 100vh;
 
     background-color: rgb(17, 27, 41);
     opacity: 0.851;
+    overflow-y: hidden;
 }
 
 .white-block {
@@ -27,3 +29,54 @@ body {
     width: 820px;
     height: 632px;
 }
+
+.white-block__body {
+    position: relative;
+    padding: 86px;
+}
+
+.white-block__body__loading-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    background-image: -moz-linear-gradient( -90deg, rgb(215,215,215) 0%, rgb(255,255,255) 100%);
+    background-image: -webkit-linear-gradient( -90deg, rgb(215,215,215) 0%, rgb(255,255,255) 100%);
+    background-image: -ms-linear-gradient( -90deg, rgb(215,215,215) 0%, rgb(255,255,255) 100%);
+    box-shadow: inset 0 3px 4.9px 0.1px rgba(0, 0, 0, 0.06);
+    width: 650px;
+    height: 28px;
+}
+
+.white-block__body__loading-block__done {
+    position: absolute;
+    left: 0;
+
+    background-image: -moz-linear-gradient( -180deg, rgb(119,164,248) 0%, rgba(117,161,248,.39) 100%);
+    background-image:  -webkit-repeating-linear-gradient(
+            150deg,
+            rgba(255,255,255,0.05),
+            rgba(50,50,50,.1) 5px,
+            rgba(50,50,50,.1) 5px,
+            rgba(255,255,255,0.05) 11px
+    ), -webkit-linear-gradient(
+            -180deg,
+            rgb(119,164,248) 0%,
+            rgba(117,161,248,.39) 100%
+    );
+    background-image: -ms-linear-gradient( -180deg, rgb(119,164,248) 0%, rgba(117,161,248,.39) 100%);
+    box-shadow: 0 8px 12px 0 rgba(133, 173, 249, 0.28);
+    width: 80%;
+    height: 100%;
+}
+
+.white-block__body__loading-block__text {
+    position: absolute;
+    font-size: 14px;
+    color: #fff;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
