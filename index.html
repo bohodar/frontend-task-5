@@ -2,71 +2,89 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width">
     <title>Form Task</title>
-    <link rel="stylesheet" href="src/stylesheets.css" />
+    <link rel="stylesheet" href="src/stylesheets/index.css" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&display=swap&subset=cyrillic" rel="stylesheet" />
-    <script defer type="text/javascript" src="src/script.js"></script>
+    <script defer type="text/javascript" src="src/scripts/script.js"></script>
 </head>
 <body>
     <section class="main-wrapper">
         <section class="white-block">
             <div class="white-block__body">
-                <div class="white-block__body__loading-block">
-                    <div class="white-block__body__loading-block__done"></div>
-                    <span class="white-block__body__loading-block__text">80% готово</span>
-                </div>
-                <div class="white-block__body__request-block">
-                    <span class="white-block__body__request-block__text">
+                <div class="white-block__body__header">
+                    <div class="white-block__body__header__loading-block">
+                        <div class="white-block__body__header__loading-block__done"></div>
+                        <span class="white-block__body__header__loading-block__text">80% готово</span>
+                    </div>
+                    <div class="white-block__body__header__request-block">
                         Почти готово! Пожалуйста, заполните эту форму и нажмите кнопку ниже, чтобы участвовать в онлайн мастер-классе
-                    </span>
+                    </div>
                 </div>
                 <form id="main-form" class="white-block__body__confirm-block">
-                    <p class="white-block__body__confirm-block__name-path">
-                        Да, Я
-                        <label for="name-field" class="white-block__body__confirm-block__name-path__lighting-text">
+                    <div class="white-block__body__confirm-block__path">
+                        <span>Да, Я</span>
+                        <label for="name-field" class="white-block__body__confirm-block__path__lighting-text">
                             (введите Ваше имя)
                         </label>
-                        <input id="name-field" type="text" class="white-block__body__confirm-block__name-path__name-field" />
-                        хочу участвовать в Онлайн Мастер-Классе и получить PDF-список “ТОП50 товаров из Китая”, которые можно продать в СНГ с наценкой в 300%
-                    </p>
-                    <p class="white-block__body__confirm-block__email-path">
-                        Вышлите мне доступ на
-                        <label for="email-field" class="white-block__body__confirm-block__name-path__lighting-text">
+                        <input
+                            id="name-field"
+                            placeholder="Снежана"
+                            type="text"
+                            class="white-block__body__confirm-block__path__enter-field"
+                        />
+                        <span>
+                            хочу участвовать в Онлайн Мастер-Классе и получить PDF-список “ТОП50 товаров из Китая”, которые можно продать в СНГ с наценкой в 300%
+                        </span>
+                    </div>
+                    <div class="white-block__body__confirm-block__path">
+                        <span>Вышлите мне доступ на</span>
+                        <label for="email-field" class="white-block__body__confirm-block__path__lighting-text">
                             E-mail
                         </label>
                         <input
-                                type="text"
-                                class="white-block__body__confirm-block__email-path__email-field"
-                                id="email-field"
+                            id="email-field"
+                            placeholder="example@mail.com"
+                            type="email"
+                            class="white-block__body__confirm-block__path__enter-field"
                         />
-                    </p>
-                    <div class="white-block__body__confirm-block__phone-path">
-                        Чтобы я 100% не забыл, пришлите мне СМС-напоминание на этот моб. тел.
-                        <label for="phone-field" class="white-block__body__confirm-block__name-path__lighting-text">
+                    </div>
+                    <div class="white-block__body__confirm-block__path">
+                        <span>
+                            Чтобы я 100% не забыл, пришлите мне СМС-напоминание на этот моб. тел.
+                        </span>
+                        <label for="phone-field" class="white-block__body__confirm-block__path__lighting-text">
                             (введите номер)
                         </label>
-                        :
-                        <div class="white-block__body__confirm-block__email-path__phone-field">
-                            <img src="imgs/flag.png" alt="flag" class="white-block__body__confirm-block__email-path__phone-field__flag" />
+                        <span>:</span>
+                        <div class="white-block__body__confirm-block__path__phone-field">
+                            <img src="imgs/flag.png" alt="flag" class="white-block__body__confirm-block__path__phone-field__flag" />
                             <input
-                                    type="text"
-                                    class="white-block__body__confirm-block__email-path__phone-field"
-                                    id="phone-field"
+                                id="phone-field"
+                                placeholder="+79 000 000 00 00"
+                                type="tel"
+                                class="white-block__body__confirm-block__path__enter-field"
                             />
                         </div>
                     </div>
-                    <input type="submit" class="white-block__body__confirm-block__accept-button" />
-                    <div class="white-block__body__confirm-block__hidden-info">
-                        <div class="white-block__body__confirm-block__hidden-info__inner">
-                            <img src="imgs/lock.png" alt="5" class="white-block__body__confirm-block__hidden-info__img" />
-                            <span class="white-block__body__confirm-block__hidden-info__text">
-                                100% защита даных от 3-х лиц
-                            </span>
-                        </div>
+                    <input
+                        type="submit"
+                        value="Участвовать в мастер-классе"
+                        class="white-block__body__confirm-block__path__accept-button"
+                    />
+                    <div class="warning-message">
+                        Пожалуйста, заполните правильно все поля ввода!
                     </div>
                 </form>
+            </div>
+            <div class="white-block__hidden-info">
+                <img src="imgs/lock.png" alt="5" />
+                <span class="white-block__hidden-info__text">
+                    100% защита даных от 3-х лиц
+                </span>
+            </div>
+            <div class="white-block__close-button">
+                <img src="imgs/close-button.png" alt="close-button" />
             </div>
         </section>
     </section>

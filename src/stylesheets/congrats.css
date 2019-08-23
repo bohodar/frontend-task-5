@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+}
+.main-block {
+    position: fixed;
+    top: 35%;
+    left: calc(50% - 170px);
+
+    width: 340px;
+
+    padding: 16px 0;
+
+    font-family: "Myriad Pro", sans-serif;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #fff;
+
+    text-align: center;
+
+    background: -webkit-linear-gradient(0deg, #f3ad64 0%, #ec7d41 100%);
+    border-radius: 36px;
+}
