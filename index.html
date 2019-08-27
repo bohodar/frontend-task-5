@@ -32,6 +32,7 @@
                             placeholder="Снежана"
                             type="text"
                             class="white-block__body__confirm-block__path__enter-field"
+                            required
                         />
                         <span>
                             хочу участвовать в Онлайн Мастер-Классе и получить PDF-список “ТОП50 товаров из Китая”, которые можно продать в СНГ с наценкой в 300%
@@ -47,6 +48,7 @@
                             placeholder="example@mail.com"
                             type="email"
                             class="white-block__body__confirm-block__path__enter-field"
+                            required
                         />
                     </div>
                     <div class="white-block__body__confirm-block__path">
@@ -61,9 +63,12 @@
                             <img src="imgs/flag.png" alt="flag" class="white-block__body__confirm-block__path__phone-field__flag" />
                             <input
                                 id="phone-field"
-                                placeholder="+79 000 000 00 00"
+                                placeholder="+380 00 000 00 00"
                                 type="tel"
+                                name="phone-number"
+                                pattern="^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$"
                                 class="white-block__body__confirm-block__path__enter-field"
+                                required
                             />
                         </div>
                     </div>

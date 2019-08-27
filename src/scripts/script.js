@@ -9,26 +9,35 @@ function handleSubmit(e) {
   const email = e.target.querySelector('#email-field');
   const phone = e.target.querySelector('#phone-field');
 
-  if (name.value && email.value.includes('@') && phone.value) {
+  const statusOfName = nameVerify(name.value);
+  const statusOfEmail = emailVerify(email.value);
+  const statusOfPhone = phoneVerify(phone.value);
+  console.log(statusOfPhone);
+
+  if (statusOfName && statusOfEmail && statusOfPhone) {
     window.location.href = 'congrats.html';
   } else {
     warning.style.display = 'block';
-
-    if (!name.value) {
-      name.classList.add('wrong-data')
-    } else {
-      name.classList.remove('wrong-data')
-    }
-    if (!email.value) {
-      email.classList.add('wrong-data')
-    } else {
-      email.classList.remove('wrong-data')
-    }
-    if (!phone.value) {
-      phone.parentElement.classList.add('wrong-data')
-    } else {
-      phone.parentElement.classList.remove('wrong-data')
-    }
+    name.classList.toggle('wrong-data', !statusOfName);
+    email.classList.toggle('wrong-data', !statusOfEmail);
+    phone.parentElement.classList.toggle('wrong-data', !statusOfPhone);
   }
 }
+
 form.addEventListener('submit', handleSubmit);
+
+function nameVerify(name) {
+   return name.search(/[!"#$%&()*+,./:;<=>?@[\\\]_`{|}~\d]/) === -1
+}
+
+function emailVerify(email) {
+  const indexOfAt = email.indexOf('@');
+  const isValidFirstEmailPart = email.slice(0, indexOfAt).search(/[!"#$%&()*+,/:;<=>?@[\\\]`{|}~\d]/) === -1;
+  const isValidLastEmailPart = email.slice(indexOfAt).includes('.');
+
+  return indexOfAt > 0 && isValidFirstEmailPart && isValidLastEmailPart
+}
+
+function phoneVerify(phone) {
+  return /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/.test(phone)
+}
