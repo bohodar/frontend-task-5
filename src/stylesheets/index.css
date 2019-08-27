@@ -1,14 +1,13 @@
 body {
     font-family: 'Montserrat', "Myriad Pro", sans-serif;
 
+    min-width: 460px;
     margin: 0;
     box-sizing: border-box;
-    min-width: 820px;
-    height: 100vh;
 
     background-color: rgb(17, 27, 41);
 
-    overflow: hidden;
+    overflow-y: hidden;
 }
 
 .main-wrapper {
@@ -24,7 +23,8 @@ body {
     -ms-align-items: center;
     align-items: center;
 
-    height: 100%;
+    height: 100vh;
+    width: 100%;
 
     opacity: 0.851;
 }
@@ -41,8 +41,7 @@ body {
     background-color: #fff;
     border-radius: 6px;
     box-shadow: 0 9px 51px 0 rgba(0, 0, 0, 0.35);
-    width: 820px;
-    height: 632px;
+    min-height: 632px;
 }
 
 .white-block__body {
@@ -302,4 +301,24 @@ body {
 .wrong-data {
     border: 1px solid tomato;
     border-radius: 6px;
+}
+
+@media (max-width: 820px) {
+    .white-block {
+        margin: 60px 20px;
+        width: 100%;
+    }
+    .white-block__body {
+        width: 100%;
+        margin: 80px 40px;
+    }
+    .white-block__body__confirm-block {
+        margin-bottom: 20px;
+    }
+    .white-block__body__confirm-block__path {
+        margin: 18px 0;
+    }
+    .warning-message {
+        font-size: .9em;
+    }
 }
