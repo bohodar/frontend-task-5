@@ -6,7 +6,7 @@ body {
     box-sizing: border-box;
 
     background-color: rgb(17, 27, 41);
-    
+
 }
 
 .main-wrapper {
@@ -173,6 +173,7 @@ body {
     border: none;
     border-bottom: 1px solid #ff8d51;
 
+    padding-top: 4px;
     padding-left: 18px;
     font-family: inherit;
 
@@ -312,6 +313,7 @@ body {
         margin: 80px 40px;
     }
     .white-block__body__confirm-block {
+        line-height: 1.95;
         margin-bottom: 20px;
     }
     .white-block__body__confirm-block__path {
