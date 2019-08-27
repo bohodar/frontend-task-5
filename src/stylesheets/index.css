@@ -1,6 +1,7 @@
 body {
     font-family: 'Montserrat', "Myriad Pro", sans-serif;
 
+    height: 100%;
     min-width: 460px;
     margin: 0;
     box-sizing: border-box;
@@ -252,7 +253,7 @@ body {
     display: none;
 
     position: absolute;
-    bottom: -25px;
+    bottom: -1.5em;
     right: 0;
 
     color: red;
@@ -304,6 +305,9 @@ body {
 }
 
 @media (max-width: 820px) {
+    .main-wrapper {
+        margin-top: 40px;
+    }
     .white-block {
         margin: 60px 20px;
         width: 100%;

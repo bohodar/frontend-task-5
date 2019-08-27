@@ -32,7 +32,7 @@ function nameVerify(name) {
 
 function emailVerify(email) {
   const indexOfAt = email.indexOf('@');
-  const isValidFirstEmailPart = email.slice(0, indexOfAt).search(/[!"#$%&()*+,/:;<=>?@[\\\]`{|}~\d]/) === -1;
+  const isValidFirstEmailPart = email.slice(0, indexOfAt).search(/[!"#$%&()*+,/:;<=>?@[\\\]`{|}~]/) === -1;
   const isValidLastEmailPart = email.slice(indexOfAt).includes('.');
 
   return indexOfAt > 0 && isValidFirstEmailPart && isValidLastEmailPart
