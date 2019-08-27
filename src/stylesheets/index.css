@@ -6,8 +6,7 @@ body {
     box-sizing: border-box;
 
     background-color: rgb(17, 27, 41);
-
-    overflow-y: hidden;
+    
 }
 
 .main-wrapper {
